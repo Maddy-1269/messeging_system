@@ -1,4 +1,4 @@
-Messaging System with RabbitMQ, Celery, Nginx, and Python
+# Messaging System with RabbitMQ, Celery, Nginx, and Python
 Overview
 
 This project demonstrates a simple messaging system with asynchronous task processing using RabbitMQ (message broker) and Celery (task queue).
@@ -174,4 +174,5 @@ Python 3.9+
 Conclusion
 
 This project demonstrates how to integrate RabbitMQ + Celery with a Python web service, managed behind Nginx, and exposed publicly with ngrok.
+
 It simulates real-world production patterns like task queuing, reverse proxying, and background job execution in a lightweight, testable environment.
