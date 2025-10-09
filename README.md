@@ -20,7 +20,7 @@ Provide endpoints to test both email sending and server logging.
 
 Expose the local setup using ngrok for external validation.
 
-# System Architecture
+## System Architecture
 Client → Nginx (Port 80) → Gunicorn/Uvicorn → Flask/FastAPI App
             │
             └── Celery → RabbitMQ → Workers → (SMTP, Logging)
@@ -176,6 +176,7 @@ Python 3.9+
 This project demonstrates how to integrate RabbitMQ + Celery with a Python web service, managed behind Nginx, and exposed publicly with ngrok.
 
 It simulates real-world production patterns like task queuing, reverse proxying, and background job execution in a lightweight, testable environment.
+
 
 
 
