@@ -10,7 +10,7 @@ Logging Current Time → ?talktome
 
 The Python application (Flask/FastAPI) is served with Gunicorn/Uvicorn behind Nginx, and is externally exposed using ngrok for public testing.
 
-Objective
+# Objective
 
 Showcase asynchronous task processing with Celery & RabbitMQ.
 
@@ -20,7 +20,7 @@ Provide endpoints to test both email sending and server logging.
 
 Expose the local setup using ngrok for external validation.
 
-System Architecture
+# System Architecture
 Client → Nginx (Port 80) → Gunicorn/Uvicorn → Flask/FastAPI App
             │
             └── Celery → RabbitMQ → Workers → (SMTP, Logging)
@@ -43,7 +43,7 @@ External Exposure: ngrok tunneling to Nginx.
 ├─ app.log              # runtime log (created automatically)
 └─ .env                 # environment config (you create this)
 
-Functional Requirements
+# Functional Requirements
 1. Email Sending (/action?sendmail=<email>)
 
 Accepts recipient email as query param.
@@ -58,7 +58,7 @@ Logs current server timestamp into app.log.
 
 Demonstrates synchronous logging (or Celery-enabled logging if desired).
 
-Implementation Steps
+# Implementation Steps
 1. Install Dependencies
 # System packages
 sudo apt-get update
@@ -153,7 +153,7 @@ Log file update.
 
 External testing via ngrok.
 
-🛠 Technologies Used
+Technologies Used
 
 RabbitMQ – Message broker
 
@@ -171,9 +171,10 @@ Ngrok – Public endpoint
 
 Python 3.9+
 
-Conclusion
+# Conclusion
 
 This project demonstrates how to integrate RabbitMQ + Celery with a Python web service, managed behind Nginx, and exposed publicly with ngrok.
 
 It simulates real-world production patterns like task queuing, reverse proxying, and background job execution in a lightweight, testable environment.
+
 
