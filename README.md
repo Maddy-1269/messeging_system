@@ -37,10 +37,15 @@ External Exposure: ngrok tunneling to Nginx.
 ## Project layout
 .
 ├─ app.py # Flask app + routes
+
 ├─ celery_app.py # Celery factory (broker/backend and task discovery)
+
 ├─ tasks.py # Celery task: send_email(...)
+
 ├─ requirements.txt # (create one with pinned deps if needed)
+
 ├─ app.log # runtime log (created automatically)
+
 └─ .env # environment config (you create this)
 
 # Functional Requirements
@@ -176,6 +181,7 @@ Python 3.9+
 This project demonstrates how to integrate RabbitMQ + Celery with a Python web service, managed behind Nginx, and exposed publicly with ngrok.
 
 It simulates real-world production patterns like task queuing, reverse proxying, and background job execution in a lightweight, testable environment.
+
 
 
 
